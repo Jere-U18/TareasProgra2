@@ -25,6 +25,7 @@ public class Jugador {
 
     @Getter
     private int bonificacionPoder=0;
+    private static boolean estaIni;
 
 
     static{
@@ -43,10 +44,14 @@ public class Jugador {
     }
 
     {
+        if(!estaIni){
         System.out.println("[ESTADISTICAS] Iniciando...");
         System.out.println("[FASES] Ramas completadas: 0");
         System.out.println("[NIVEL] 0-0");
-        
+        }
+    }
+    public Jugador(){
+        estaIni=true;
     }
     
     public void registrarBonificacion(String tipo) {
