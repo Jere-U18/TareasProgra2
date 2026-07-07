@@ -99,6 +99,7 @@ public class Jugador {
     public void mostrarEstadisticas(){
 
         System.out.println("====================================");
+        System.out.println("Fases completadas (actual): "+fasesCompletadas);
         System.out.println("Nivel actual (Niveles completados): " + nivelesCompletados);
         System.out.println("Bonificaciones aplicadas -> Vida: " + bonificacionVida);
         System.out.println("Vida actual: "+getVida());

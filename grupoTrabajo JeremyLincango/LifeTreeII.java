@@ -23,7 +23,7 @@ public class LifeTreeII {
         System.out.println("Comienza tu viaje a través de las " + mapaArbol.length + " ramas del arbol.\n");
 
         for (int rama = 0; rama < mapaArbol.length; rama++) {
-            
+            jugador.completarFase();
             System.out.println("\n ---- ENTRANDO A LA RAMA [" + (rama + 1) + "] ----");
             
             for (int nivel = 0; nivel < mapaArbol[rama].length; nivel++) {
@@ -39,7 +39,7 @@ public class LifeTreeII {
                 System.out.println("1. Mejorar Vida (+2 PS)\n2. Mejorar Poder (+1 ATQ)");
                 int opcion = scanner.nextInt();
 
-                Jugador aplicarMejora = new Jugador() {
+                Jugador aplicarMejora = new Jugador() {//clase anonima
                     @Override
                     public void bonificacion() {
                         if (opcion == 1) {
@@ -70,7 +70,7 @@ public class LifeTreeII {
 
                     System.out.println("\n ¡CUIDADO! Un jefe ha aparecido: " + jefe.getNombre());
                     
-                    // Polimorfismo con interface aqui
+                    // Polimorfismo con interface aqui y clase anonima
                     Movimientos accionesFase = new Movimientos() {
                         @Override
                         public void esquivarAtaque() {
